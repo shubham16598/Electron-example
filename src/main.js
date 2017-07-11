@@ -9,6 +9,8 @@ mainWindow = new BrowserWindow({
         height:400
     });
     
+mainWindow.loadURL(`file://${__dirname}/countdown.html`);
+    
 mainWindow.on("closed",_=>{
         console.log("closed");
         mainWindow=null;
