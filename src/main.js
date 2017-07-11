@@ -1,4 +1,5 @@
 const electron = require("electron");
+const countdown = require("./countdown.js");
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 let mainWindow
@@ -9,6 +10,7 @@ mainWindow = new BrowserWindow({
         height:400
     });
     
+countdown();
 mainWindow.loadURL(`file://${__dirname}/countdown.html`);
     
 mainWindow.on("closed",_=>{
